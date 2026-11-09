@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.lushplugins"
-version = "1.0.0-alpha.1"
+version = "1.0.0"
 
 repositories {
     mavenLocal()
@@ -19,11 +19,7 @@ repositories {
 
 dependencies {
     // Dependencies
-    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
-
-    // Soft Dependencies
-
-    // Libraries
+    compileOnly("io.papermc.paper:paper-api:26.3.build.+")
 }
 
 java {
