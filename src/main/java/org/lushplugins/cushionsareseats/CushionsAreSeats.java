@@ -4,6 +4,7 @@ import org.bukkit.entity.Cushion;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityMountEvent;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,10 +17,15 @@ public final class CushionsAreSeats extends JavaPlugin implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onCushionInteract(PlayerInteractAtEntityEvent event) {
-        if (event.isCancelled() && event.getRightClicked() instanceof Cushion cushion) {
-            if (cushion.getPassengers().isEmpty()) {
-                event.setCancelled(false);
-            }
+        if (event.isCancelled() && event.getRightClicked() instanceof Cushion) {
+            event.setCancelled(false);
+        }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onCushionRide(EntityMountEvent event) {
+        if (event.isCancelled() && event.getMount() instanceof Cushion) {
+            event.setCancelled(false);
         }
     }
 }
