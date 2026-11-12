@@ -60,11 +60,13 @@ tasks {
     }
 
     runServer {
-        minecraftVersion("26.2")
+        minecraftVersion("26.3")
 
         downloadPlugins {
             modrinth("viaversion", "5.12.1")
             modrinth("viabackwards", "5.12.1")
+            modrinth("fastasyncworldedit", "2.16.2")
+            modrinth("worldguard", "7.0.21")
         }
     }
 }
