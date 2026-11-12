@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.lushplugins"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenLocal()
@@ -65,7 +65,7 @@ tasks {
         downloadPlugins {
             modrinth("viaversion", "5.12.1")
             modrinth("viabackwards", "5.12.1")
-            modrinth("fastasyncworldedit", "2.16.2")
+            modrinth("worldedit", "YFnqiUlL")
             modrinth("worldguard", "7.0.21")
         }
     }
